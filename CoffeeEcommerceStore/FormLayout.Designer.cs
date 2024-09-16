@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel_main = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button_nav_product = new System.Windows.Forms.Button();
             this.button_nav_dashboard = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel_main = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -55,42 +55,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 576);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(200, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(958, 52);
-            this.panel2.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(94, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Cửa hàng Coffee quận 1";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Cửa hàng: ";
-            // 
-            // panel_main
-            // 
-            this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_main.Location = new System.Drawing.Point(200, 52);
-            this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(958, 524);
-            this.panel_main.TabIndex = 2;
             // 
             // button4
             // 
@@ -145,7 +109,6 @@
             this.button_nav_product.TabIndex = 1;
             this.button_nav_product.Text = "Sản phẩm";
             this.button_nav_product.UseVisualStyleBackColor = true;
-            this.button_nav_product.Click += new System.EventHandler(this.button_nav_product_Click);
             // 
             // button_nav_dashboard
             // 
@@ -159,7 +122,42 @@
             this.button_nav_dashboard.TabIndex = 1;
             this.button_nav_dashboard.Text = "Trang chủ";
             this.button_nav_dashboard.UseVisualStyleBackColor = true;
-            this.button_nav_dashboard.Click += new System.EventHandler(this.button_nav_dashboard_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(200, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(958, 52);
+            this.panel2.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(94, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(149, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Cửa hàng Coffee quận 1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(18, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Cửa hàng: ";
+            // 
+            // panel_main
+            // 
+            this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_main.Location = new System.Drawing.Point(200, 52);
+            this.panel_main.Name = "panel_main";
+            this.panel_main.Size = new System.Drawing.Size(958, 524);
+            this.panel_main.TabIndex = 2;
             // 
             // FormLayout
             // 
