@@ -73,6 +73,16 @@ namespace CoffeeEcommerceStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap coffee_placeholder {
+            get {
+                object obj = ResourceManager.GetObject("coffee-placeholder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_coffee_cup_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-coffee-cup-24", resourceCulture);
