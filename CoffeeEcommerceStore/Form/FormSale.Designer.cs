@@ -29,15 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox_search = new System.Windows.Forms.TextBox();
-            this.comboBox_category = new System.Windows.Forms.ComboBox();
-            this.button_search = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel_products = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button_search = new System.Windows.Forms.Button();
+            this.comboBox_category = new System.Windows.Forms.ComboBox();
+            this.textBox_search = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button_confirm = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox_selected_product_image = new System.Windows.Forms.PictureBox();
@@ -45,7 +43,7 @@
             this.label_selected_product_price = new System.Windows.Forms.Label();
             this.label_selected_product_name = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button_add_product = new System.Windows.Forms.Button();
+            this.button_add_order_item = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.numericUpDown_quantity = new System.Windows.Forms.NumericUpDown();
             this.panel_sizes = new System.Windows.Forms.Panel();
@@ -53,17 +51,18 @@
             this.radioButton_size_medium = new System.Windows.Forms.RadioButton();
             this.radioButton_size_small = new System.Windows.Forms.RadioButton();
             this.panel_toppings = new System.Windows.Forms.Panel();
-            this.listBox_cart = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.checkedListBox_toppings = new System.Windows.Forms.CheckedListBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.checkedListBox_toppings = new System.Windows.Forms.CheckedListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.listBox_order_items = new System.Windows.Forms.ListBox();
+            this.button_confirm = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_selected_product_image)).BeginInit();
@@ -73,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_quantity)).BeginInit();
             this.panel_sizes.SuspendLayout();
             this.panel_toppings.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -87,6 +87,17 @@
             this.panel1.Size = new System.Drawing.Size(925, 771);
             this.panel1.TabIndex = 0;
             // 
+            // flowLayoutPanel_products
+            // 
+            this.flowLayoutPanel_products.AutoScroll = true;
+            this.flowLayoutPanel_products.BackColor = System.Drawing.SystemColors.Control;
+            this.flowLayoutPanel_products.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel_products.Location = new System.Drawing.Point(0, 97);
+            this.flowLayoutPanel_products.Name = "flowLayoutPanel_products";
+            this.flowLayoutPanel_products.Padding = new System.Windows.Forms.Padding(3, 10, 3, 3);
+            this.flowLayoutPanel_products.Size = new System.Drawing.Size(925, 674);
+            this.flowLayoutPanel_products.TabIndex = 1;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -100,26 +111,15 @@
             this.panel3.Size = new System.Drawing.Size(925, 97);
             this.panel3.TabIndex = 0;
             // 
-            // textBox_search
+            // label1
             // 
-            this.textBox_search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox_search.Location = new System.Drawing.Point(197, 28);
-            this.textBox_search.Multiline = true;
-            this.textBox_search.Name = "textBox_search";
-            this.textBox_search.Size = new System.Drawing.Size(198, 45);
-            this.textBox_search.TabIndex = 0;
-            // 
-            // comboBox_category
-            // 
-            this.comboBox_category.FormattingEnabled = true;
-            this.comboBox_category.ItemHeight = 16;
-            this.comboBox_category.Location = new System.Drawing.Point(12, 49);
-            this.comboBox_category.Name = "comboBox_category";
-            this.comboBox_category.Size = new System.Drawing.Size(165, 24);
-            this.comboBox_category.TabIndex = 1;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(8, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Danh mục";
             // 
             // button_search
             // 
@@ -133,26 +133,26 @@
             this.button_search.Text = "Tìm kiếm";
             this.button_search.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // comboBox_category
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(8, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Danh mục";
+            this.comboBox_category.FormattingEnabled = true;
+            this.comboBox_category.ItemHeight = 16;
+            this.comboBox_category.Location = new System.Drawing.Point(12, 49);
+            this.comboBox_category.Name = "comboBox_category";
+            this.comboBox_category.Size = new System.Drawing.Size(165, 24);
+            this.comboBox_category.TabIndex = 1;
             // 
-            // flowLayoutPanel_products
+            // textBox_search
             // 
-            this.flowLayoutPanel_products.AutoScroll = true;
-            this.flowLayoutPanel_products.BackColor = System.Drawing.SystemColors.Control;
-            this.flowLayoutPanel_products.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel_products.Location = new System.Drawing.Point(0, 97);
-            this.flowLayoutPanel_products.Name = "flowLayoutPanel_products";
-            this.flowLayoutPanel_products.Padding = new System.Windows.Forms.Padding(3, 10, 3, 3);
-            this.flowLayoutPanel_products.Size = new System.Drawing.Size(925, 674);
-            this.flowLayoutPanel_products.TabIndex = 1;
+            this.textBox_search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBox_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox_search.Location = new System.Drawing.Point(197, 28);
+            this.textBox_search.Multiline = true;
+            this.textBox_search.Name = "textBox_search";
+            this.textBox_search.Size = new System.Drawing.Size(198, 45);
+            this.textBox_search.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
@@ -168,39 +168,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1337, 781);
             this.tableLayoutPanel1.TabIndex = 2;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Snow;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.button1);
-            this.panel5.Controls.Add(this.textBox1);
-            this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.listBox_cart);
-            this.panel5.Controls.Add(this.button_confirm);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 426);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(396, 349);
-            this.panel5.TabIndex = 0;
-            // 
-            // button_confirm
-            // 
-            this.button_confirm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_confirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(121)))), ((int)(((byte)(5)))));
-            this.button_confirm.FlatAppearance.BorderSize = 0;
-            this.button_confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_confirm.Font = new System.Drawing.Font("Microsoft PhagsPa", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button_confirm.ForeColor = System.Drawing.Color.Snow;
-            this.button_confirm.Location = new System.Drawing.Point(3, 288);
-            this.button_confirm.Name = "button_confirm";
-            this.button_confirm.Size = new System.Drawing.Size(387, 57);
-            this.button_confirm.TabIndex = 14;
-            this.button_confirm.Text = "Xác nhận thanh toán";
-            this.button_confirm.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -277,27 +244,27 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.button_add_product);
+            this.panel7.Controls.Add(this.button_add_order_item);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(201, 343);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(192, 80);
             this.panel7.TabIndex = 18;
             // 
-            // button_add_product
+            // button_add_order_item
             // 
-            this.button_add_product.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.button_add_order_item.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_add_product.BackColor = System.Drawing.Color.Snow;
-            this.button_add_product.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_add_product.Font = new System.Drawing.Font("Microsoft PhagsPa", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button_add_product.ForeColor = System.Drawing.Color.Orange;
-            this.button_add_product.Location = new System.Drawing.Point(2, 24);
-            this.button_add_product.Name = "button_add_product";
-            this.button_add_product.Size = new System.Drawing.Size(187, 53);
-            this.button_add_product.TabIndex = 14;
-            this.button_add_product.Text = "Thêm vào";
-            this.button_add_product.UseVisualStyleBackColor = false;
+            this.button_add_order_item.BackColor = System.Drawing.Color.Snow;
+            this.button_add_order_item.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_add_order_item.Font = new System.Drawing.Font("Microsoft PhagsPa", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button_add_order_item.ForeColor = System.Drawing.Color.Orange;
+            this.button_add_order_item.Location = new System.Drawing.Point(2, 24);
+            this.button_add_order_item.Name = "button_add_order_item";
+            this.button_add_order_item.Size = new System.Drawing.Size(187, 53);
+            this.button_add_order_item.TabIndex = 14;
+            this.button_add_order_item.Text = "Thêm vào";
+            this.button_add_order_item.UseVisualStyleBackColor = false;
             // 
             // panel8
             // 
@@ -371,28 +338,49 @@
             this.panel_toppings.Size = new System.Drawing.Size(192, 207);
             this.panel_toppings.TabIndex = 21;
             // 
-            // listBox_cart
+            // checkedListBox_toppings
             // 
-            this.listBox_cart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.checkedListBox_toppings.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkedListBox_toppings.FormattingEnabled = true;
+            this.checkedListBox_toppings.Location = new System.Drawing.Point(0, 0);
+            this.checkedListBox_toppings.Name = "checkedListBox_toppings";
+            this.checkedListBox_toppings.Size = new System.Drawing.Size(192, 207);
+            this.checkedListBox_toppings.TabIndex = 1;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Snow;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.button1);
+            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.listBox_order_items);
+            this.panel5.Controls.Add(this.button_confirm);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(0, 426);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(396, 349);
+            this.panel5.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBox_cart.FormattingEnabled = true;
-            this.listBox_cart.ItemHeight = 16;
-            this.listBox_cart.Location = new System.Drawing.Point(3, 2);
-            this.listBox_cart.Name = "listBox_cart";
-            this.listBox_cart.Size = new System.Drawing.Size(389, 164);
-            this.listBox_cart.TabIndex = 15;
+            this.button1.Location = new System.Drawing.Point(308, 191);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 37);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Tìm";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // textBox1
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(3, 251);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 20);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Tổng tiền:";
+            this.textBox1.Location = new System.Drawing.Point(99, 196);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(203, 22);
+            this.textBox1.TabIndex = 17;
             // 
             // label3
             // 
@@ -419,32 +407,44 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Email khách";
             // 
-            // textBox1
+            // label2
             // 
-            this.textBox1.Location = new System.Drawing.Point(99, 196);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(203, 22);
-            this.textBox1.TabIndex = 17;
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(3, 251);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 20);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Tổng tiền:";
             // 
-            // button1
+            // listBox_order_items
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.listBox_order_items.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(308, 191);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 37);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Tìm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.listBox_order_items.FormattingEnabled = true;
+            this.listBox_order_items.ItemHeight = 16;
+            this.listBox_order_items.Location = new System.Drawing.Point(3, 2);
+            this.listBox_order_items.Name = "listBox_order_items";
+            this.listBox_order_items.Size = new System.Drawing.Size(389, 164);
+            this.listBox_order_items.TabIndex = 15;
             // 
-            // checkedListBox_toppings
+            // button_confirm
             // 
-            this.checkedListBox_toppings.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkedListBox_toppings.FormattingEnabled = true;
-            this.checkedListBox_toppings.Location = new System.Drawing.Point(0, 0);
-            this.checkedListBox_toppings.Name = "checkedListBox_toppings";
-            this.checkedListBox_toppings.Size = new System.Drawing.Size(192, 207);
-            this.checkedListBox_toppings.TabIndex = 1;
+            this.button_confirm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_confirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(121)))), ((int)(((byte)(5)))));
+            this.button_confirm.FlatAppearance.BorderSize = 0;
+            this.button_confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_confirm.Font = new System.Drawing.Font("Microsoft PhagsPa", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button_confirm.ForeColor = System.Drawing.Color.Snow;
+            this.button_confirm.Location = new System.Drawing.Point(3, 288);
+            this.button_confirm.Name = "button_confirm";
+            this.button_confirm.Size = new System.Drawing.Size(387, 57);
+            this.button_confirm.TabIndex = 14;
+            this.button_confirm.Text = "Xác nhận thanh toán";
+            this.button_confirm.UseVisualStyleBackColor = false;
             // 
             // FormSale
             // 
@@ -460,8 +460,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_selected_product_image)).EndInit();
@@ -472,6 +470,8 @@
             this.panel_sizes.ResumeLayout(false);
             this.panel_sizes.PerformLayout();
             this.panel_toppings.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -493,7 +493,7 @@
         private System.Windows.Forms.Label label_selected_product_price;
         private System.Windows.Forms.Label label_selected_product_name;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button_add_product;
+        private System.Windows.Forms.Button button_add_order_item;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.NumericUpDown numericUpDown_quantity;
         private System.Windows.Forms.Panel panel_sizes;
@@ -503,7 +503,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button_confirm;
         private System.Windows.Forms.Panel panel_toppings;
-        private System.Windows.Forms.ListBox listBox_cart;
+        private System.Windows.Forms.ListBox listBox_order_items;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;

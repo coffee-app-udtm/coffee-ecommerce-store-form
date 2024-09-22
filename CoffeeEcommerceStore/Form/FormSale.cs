@@ -20,7 +20,11 @@ namespace CoffeeEcommerceStore
     {
         ProductRequest productRequest = new ProductRequest();
         CategoryRequest categoryRequest = new CategoryRequest();
+        CartRequest cartRequest = new CartRequest();
+
         List<Product> products = new List<Product>();
+        List<OrderItem> orderItems = new List<OrderItem>();
+        Product selectedProduct = null;
 
         public FormSale()
         {
@@ -28,6 +32,57 @@ namespace CoffeeEcommerceStore
 
             this.Load += FormSale_Load;
             this.button_search.Click += Button_search_Click;
+            this.button_add_order_item.Click += Button_add_order_item_Click;
+
+            ResetAfterAddedToCart();
+        }
+
+        private async void Button_add_order_item_Click(object sender, EventArgs e)
+        {
+            int quantity = (int)numericUpDown_quantity.Value;
+            string userId = "store_1"; 
+
+            int? selectedSizeId = null;
+            foreach (RadioButton radioButton in panel_sizes.Controls)
+            {
+                if (radioButton.Checked)
+                {
+                    ProductSize selectedSize = (ProductSize)radioButton.Tag;
+                    selectedSizeId = selectedSize.size_id;
+                    break;
+                }
+            }
+
+            List<int> selectedToppingIds = new List<int>();
+            foreach (ProductTopping topping in checkedListBox_toppings.CheckedItems)
+            {
+                selectedToppingIds.Add(topping.id);
+            }
+
+          
+
+            try
+            {
+                bool result = await cartRequest.AddToCartAsync(selectedProduct.id, userId, quantity, selectedSizeId, selectedToppingIds);
+
+                if (result)
+                {
+                    //MessageBox.Show("Thêm vào giỏ hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Render listbox cart
+                }
+
+                else
+                {
+                    MessageBox.Show("Thêm vào giỏ hàng thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
         }
 
         private void Button_search_Click(object sender, EventArgs e)
@@ -77,6 +132,14 @@ namespace CoffeeEcommerceStore
             }
         }
 
+        private void ResetAfterAddedToCart()
+        {
+            selectedProduct = null;
+            numericUpDown_quantity.Value = 1;
+            panel_sizes.Controls.Clear();
+            checkedListBox_toppings.Items.Clear();
+        }
+
         private void FilterProducts()
         {
             string searchValue = textBox_search.Text.Trim();
@@ -114,9 +177,10 @@ namespace CoffeeEcommerceStore
             }
         }
 
-
         private void SelectProductHandler(object sender, Product product)
         {
+            selectedProduct = product;
+
             RenderSelectedProduct(product);
 
             RenderProductSizes(product.id);
