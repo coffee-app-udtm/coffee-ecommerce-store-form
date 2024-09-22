@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSale));
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel_products = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button_find_customer = new System.Windows.Forms.Button();
+            this.textBox_email_or_phone = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button_search = new System.Windows.Forms.Button();
@@ -57,12 +58,14 @@
             this.checkedListBox_toppings = new System.Windows.Forms.CheckedListBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button_remove_order_item = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label_customer_info = new System.Windows.Forms.Label();
             this.label_total_payment = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.listBox_order_items = new System.Windows.Forms.ListBox();
-            this.button_confirm_order = new System.Windows.Forms.Button();
+            this.button_place_order = new System.Windows.Forms.Button();
+            this.printPreviewDialog_order = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument_order = new System.Drawing.Printing.PrintDocument();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -104,8 +107,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.button_find_customer);
+            this.panel3.Controls.Add(this.textBox_email_or_phone);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.button_search);
@@ -118,25 +121,25 @@
             this.panel3.TabIndex = 0;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // button1
+            // button_find_customer
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.button_find_customer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(834, 36);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 37);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Tìm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_find_customer.Location = new System.Drawing.Point(834, 36);
+            this.button_find_customer.Name = "button_find_customer";
+            this.button_find_customer.Size = new System.Drawing.Size(75, 37);
+            this.button_find_customer.TabIndex = 20;
+            this.button_find_customer.Text = "Tìm";
+            this.button_find_customer.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBox_email_or_phone
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.textBox_email_or_phone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(605, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(223, 22);
-            this.textBox1.TabIndex = 19;
+            this.textBox_email_or_phone.Location = new System.Drawing.Point(605, 49);
+            this.textBox_email_or_phone.Name = "textBox_email_or_phone";
+            this.textBox_email_or_phone.Size = new System.Drawing.Size(223, 22);
+            this.textBox_email_or_phone.TabIndex = 19;
             // 
             // label4
             // 
@@ -401,12 +404,12 @@
             this.panel5.BackColor = System.Drawing.Color.Snow;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.button_remove_order_item);
-            this.panel5.Controls.Add(this.label6);
+            this.panel5.Controls.Add(this.label_customer_info);
             this.panel5.Controls.Add(this.label_total_payment);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.listBox_order_items);
-            this.panel5.Controls.Add(this.button_confirm_order);
+            this.panel5.Controls.Add(this.button_place_order);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(0, 426);
             this.panel5.Name = "panel5";
@@ -424,18 +427,18 @@
             this.button_remove_order_item.Text = "Gỡ bỏ sản phẩm đã chọn";
             this.button_remove_order_item.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // label_customer_info
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label_customer_info.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(108, 211);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(282, 29);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Unknown";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label_customer_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label_customer_info.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_customer_info.Location = new System.Drawing.Point(108, 211);
+            this.label_customer_info.Name = "label_customer_info";
+            this.label_customer_info.Size = new System.Drawing.Size(282, 29);
+            this.label_customer_info.TabIndex = 16;
+            this.label_customer_info.Text = "Unknown";
+            this.label_customer_info.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label_total_payment
             // 
@@ -485,21 +488,31 @@
             this.listBox_order_items.Size = new System.Drawing.Size(389, 132);
             this.listBox_order_items.TabIndex = 15;
             // 
-            // button_confirm_order
+            // button_place_order
             // 
-            this.button_confirm_order.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.button_place_order.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_confirm_order.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(121)))), ((int)(((byte)(5)))));
-            this.button_confirm_order.FlatAppearance.BorderSize = 0;
-            this.button_confirm_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_confirm_order.Font = new System.Drawing.Font("Microsoft PhagsPa", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button_confirm_order.ForeColor = System.Drawing.Color.Snow;
-            this.button_confirm_order.Location = new System.Drawing.Point(3, 288);
-            this.button_confirm_order.Name = "button_confirm_order";
-            this.button_confirm_order.Size = new System.Drawing.Size(387, 57);
-            this.button_confirm_order.TabIndex = 14;
-            this.button_confirm_order.Text = "Xác nhận thanh toán";
-            this.button_confirm_order.UseVisualStyleBackColor = false;
+            this.button_place_order.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(121)))), ((int)(((byte)(5)))));
+            this.button_place_order.FlatAppearance.BorderSize = 0;
+            this.button_place_order.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_place_order.Font = new System.Drawing.Font("Microsoft PhagsPa", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button_place_order.ForeColor = System.Drawing.Color.Snow;
+            this.button_place_order.Location = new System.Drawing.Point(3, 288);
+            this.button_place_order.Name = "button_place_order";
+            this.button_place_order.Size = new System.Drawing.Size(387, 57);
+            this.button_place_order.TabIndex = 14;
+            this.button_place_order.Text = "Xác nhận thanh toán";
+            this.button_place_order.UseVisualStyleBackColor = false;
+            // 
+            // printPreviewDialog_order
+            // 
+            this.printPreviewDialog_order.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog_order.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog_order.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog_order.Enabled = true;
+            this.printPreviewDialog_order.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog_order.Icon")));
+            this.printPreviewDialog_order.Name = "printPreviewDialog_order";
+            this.printPreviewDialog_order.Visible = false;
             // 
             // FormSale
             // 
@@ -556,17 +569,19 @@
         private System.Windows.Forms.RadioButton radioButton_size_medium;
         private System.Windows.Forms.RadioButton radioButton_size_small;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button_confirm_order;
+        private System.Windows.Forms.Button button_place_order;
         private System.Windows.Forms.Panel panel_toppings;
         private System.Windows.Forms.ListBox listBox_order_items;
         private System.Windows.Forms.Label label_total_payment;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckedListBox checkedListBox_toppings;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_email_or_phone;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button_find_customer;
+        private System.Windows.Forms.Label label_customer_info;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button_remove_order_item;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog_order;
+        private System.Drawing.Printing.PrintDocument printDocument_order;
     }
 }
