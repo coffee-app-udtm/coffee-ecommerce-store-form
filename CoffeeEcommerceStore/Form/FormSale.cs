@@ -23,8 +23,11 @@ namespace CoffeeEcommerceStore
         CartRequest cartRequest = new CartRequest();
 
         List<Product> products = new List<Product>();
-        List<OrderItem> orderItems = new List<OrderItem>();
+        List<Cart> orderItems = new List<Cart>();
         Product selectedProduct = null;
+
+
+        string userId = "store_1"; // get from properties setting
 
         public FormSale()
         {
@@ -33,14 +36,52 @@ namespace CoffeeEcommerceStore
             this.Load += FormSale_Load;
             this.button_search.Click += Button_search_Click;
             this.button_add_order_item.Click += Button_add_order_item_Click;
+            this.button_remove_order_item.Click += Button_remove_order_item_Click;
 
             ResetAfterAddedToCart();
+        }
+
+        private async void Button_remove_order_item_Click(object sender, EventArgs e)
+        {
+            if (listBox_order_items.SelectedIndex > -1)
+            {
+                try
+                {
+                    Cart selectedCart = (Cart)listBox_order_items.SelectedItem;
+
+                    bool result = await cartRequest.DeleteCartAsync(selectedCart.id);
+
+                    if (result)
+                    {
+                        orderItems.Remove(selectedCart);
+
+                        listBox_order_items.DataSource = null;
+                        listBox_order_items.DataSource = orderItems;
+
+                        listBox_order_items.DisplayMember = "display_info";
+                        listBox_order_items.ValueMember = "id";
+
+                        RenderTotalPayment();
+                    }
+                    else
+                    {
+                        MessageBox.Show(Text, "Xóa sản phẩm thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                } catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            } else
+            {
+                MessageBox.Show("Vui lòng chọn sản phẩm cần xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private async void Button_add_order_item_Click(object sender, EventArgs e)
         {
             int quantity = (int)numericUpDown_quantity.Value;
-            string userId = "store_1"; 
+            
 
             int? selectedSizeId = null;
             foreach (RadioButton radioButton in panel_sizes.Controls)
@@ -59,17 +100,14 @@ namespace CoffeeEcommerceStore
                 selectedToppingIds.Add(topping.id);
             }
 
-          
-
             try
             {
                 bool result = await cartRequest.AddToCartAsync(selectedProduct.id, userId, quantity, selectedSizeId, selectedToppingIds);
 
                 if (result)
                 {
-                    //MessageBox.Show("Thêm vào giỏ hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                     // Render listbox cart
+                    RenderOrderItems();
                 }
 
                 else
@@ -95,6 +133,8 @@ namespace CoffeeEcommerceStore
             try {
                 await LoadProductsAsync();
                 await RenderComboboxCategory();
+
+                RenderOrderItems();
 
                 this.comboBox_category.SelectedIndexChanged += ComboBox_category_SelectedIndexChanged;
 
@@ -255,6 +295,33 @@ namespace CoffeeEcommerceStore
             }
         }
 
+        private async void RenderOrderItems()
+        {
+            try
+            {
+                orderItems = await cartRequest.GetCartsAsync(userId);
+
+                listBox_order_items.DataSource = null;
+                listBox_order_items.DataSource = orderItems;
+
+                listBox_order_items.DisplayMember = "display_info";
+                listBox_order_items.ValueMember = "id";
+
+                RenderTotalPayment();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void RenderTotalPayment()
+        {
+            decimal totalPayment = orderItems.Sum(item => item.order_item_price);
+
+            label_total_payment.Text = Util.FormatVNCurrency(totalPayment);
+        }
+
         private async Task RenderComboboxCategory()
         {
             comboBox_category.Items.Clear();
@@ -273,6 +340,11 @@ namespace CoffeeEcommerceStore
             comboBox_category.DataSource = categories;
             comboBox_category.DisplayMember = "category_name";
             comboBox_category.ValueMember = "id";
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
