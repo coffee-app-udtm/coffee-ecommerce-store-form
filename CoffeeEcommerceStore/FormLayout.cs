@@ -20,7 +20,7 @@ namespace CoffeeEcommerceStore
 
             initNavButtons();
             setActiveButton(button_nav_dashboard);
-            loadForm(new FormDashboard());
+            loadForm(new FormSale());
         }
 
         private void initNavButtons()
@@ -62,7 +62,7 @@ namespace CoffeeEcommerceStore
             switch (clickedButton.Name)
             {
                 case "button_nav_dashboard":
-                    loadForm(new FormDashboard());
+                    loadForm(new FormSale());
                     break;
                 case "button_nav_product":
                     loadForm(new FormProduct());

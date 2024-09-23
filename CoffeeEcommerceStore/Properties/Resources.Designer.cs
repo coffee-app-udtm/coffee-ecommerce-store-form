@@ -63,6 +63,26 @@ namespace CoffeeEcommerceStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap coffee_image_sample {
+            get {
+                object obj = ResourceManager.GetObject("coffee-image-sample", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap coffee_placeholder {
+            get {
+                object obj = ResourceManager.GetObject("coffee-placeholder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_coffee_cup_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-coffee-cup-24", resourceCulture);
@@ -96,6 +116,16 @@ namespace CoffeeEcommerceStore.Properties {
         internal static System.Drawing.Bitmap icons8_logout_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-logout-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_search_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-search-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

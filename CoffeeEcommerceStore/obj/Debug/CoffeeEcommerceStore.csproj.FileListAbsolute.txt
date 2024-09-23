@@ -8,5 +8,11 @@ C:\Users\84359\Documents\Projects\Winform\CoffeeEcommerceStore\CoffeeEcommerceSt
 C:\Users\84359\Documents\Projects\Winform\CoffeeEcommerceStore\CoffeeEcommerceStore\obj\Debug\CoffeeEcommerceStore.csproj.CoreCompileInputs.cache
 C:\Users\84359\Documents\Projects\Winform\CoffeeEcommerceStore\CoffeeEcommerceStore\obj\Debug\CoffeeEcommerceStore.exe
 C:\Users\84359\Documents\Projects\Winform\CoffeeEcommerceStore\CoffeeEcommerceStore\obj\Debug\CoffeeEcommerceStore.pdb
-C:\Users\84359\Documents\Projects\Winform\CoffeeEcommerceStore\CoffeeEcommerceStore\obj\Debug\CoffeeEcommerceStore.FormDashboard.resources
 C:\Users\84359\Documents\Projects\Winform\CoffeeEcommerceStore\CoffeeEcommerceStore\obj\Debug\CoffeeEcommerceStore.FormProduct.resources
+C:\Users\84359\Documents\Projects\Winform\CoffeeEcommerceStore\CoffeeEcommerceStore\obj\Debug\CoffeeEcommerceStore.FormSale.resources
+C:\Users\84359\Documents\Projects\Winform\CoffeeEcommerceStore\CoffeeEcommerceStore\bin\Debug\CoffeeLibrary.dll
+C:\Users\84359\Documents\Projects\Winform\CoffeeEcommerceStore\CoffeeEcommerceStore\bin\Debug\UCProduct.dll
+C:\Users\84359\Documents\Projects\Winform\CoffeeEcommerceStore\CoffeeEcommerceStore\bin\Debug\Newtonsoft.Json.dll
+C:\Users\84359\Documents\Projects\Winform\CoffeeEcommerceStore\CoffeeEcommerceStore\bin\Debug\CoffeeLibrary.pdb
+C:\Users\84359\Documents\Projects\Winform\CoffeeEcommerceStore\CoffeeEcommerceStore\bin\Debug\UCProduct.pdb
+C:\Users\84359\Documents\Projects\Winform\CoffeeEcommerceStore\CoffeeEcommerceStore\obj\Debug\CoffeeEcommerceStore.csproj.CopyComplete

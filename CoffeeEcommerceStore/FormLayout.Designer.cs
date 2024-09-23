@@ -30,12 +30,12 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_main = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button_nav_product = new System.Windows.Forms.Button();
             this.button_nav_dashboard = new System.Windows.Forms.Button();
-            this.panel_main = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +69,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(167, 570);
             this.panel1.TabIndex = 1;
+            // 
+            // panel_main
+            // 
+            this.panel_main.BackColor = System.Drawing.SystemColors.Control;
+            this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_main.Location = new System.Drawing.Point(176, 3);
+            this.panel_main.Name = "panel_main";
+            this.panel_main.Size = new System.Drawing.Size(979, 570);
+            this.panel_main.TabIndex = 2;
             // 
             // button4
             // 
@@ -141,14 +150,6 @@
             this.button_nav_dashboard.TabIndex = 1;
             this.button_nav_dashboard.Text = "Trang chủ";
             this.button_nav_dashboard.UseVisualStyleBackColor = true;
-            // 
-            // panel_main
-            // 
-            this.panel_main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_main.Location = new System.Drawing.Point(176, 3);
-            this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(979, 570);
-            this.panel_main.TabIndex = 2;
             // 
             // FormLayout
             // 

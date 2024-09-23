@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CoffeeLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CoffeeEcommerceLib\CoffeeLibrary\obj\Debug\CoffeeLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,13 +48,16 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UCProduct">
+      <HintPath>..\..\CoffeeEcommerceLib\UCProduct\obj\Debug\UCProduct.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form\FormDashboard.cs">
+    <Compile Include="Form\FormSale.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FormDashboard.Designer.cs">
-      <DependentUpon>FormDashboard.cs</DependentUpon>
+    <Compile Include="Form\FormSale.Designer.cs">
+      <DependentUpon>FormSale.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLayout.cs">
       <SubType>Form</SubType>
@@ -66,8 +73,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form\FormDashboard.resx">
-      <DependentUpon>FormDashboard.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FormSale.resx">
+      <DependentUpon>FormSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLayout.resx">
       <DependentUpon>FormLayout.cs</DependentUpon>
@@ -112,6 +119,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-logout-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee-image-sample.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee-placeholder.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
