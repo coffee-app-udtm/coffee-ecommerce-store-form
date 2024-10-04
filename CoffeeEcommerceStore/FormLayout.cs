@@ -8,10 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using CoffeeEcommerceStore._Form.Product;
+using CoffeeEcommerceStore._Form.Order;
+
 namespace CoffeeEcommerceStore
 {
 
-    public partial class FormLayout : Form
+    public partial class FormLayout : System.Windows.Forms.Form
     {
         private List<Button> navButtons;
         public FormLayout()
@@ -29,6 +32,8 @@ namespace CoffeeEcommerceStore
 
             navButtons.Add(button_nav_dashboard);
             navButtons.Add(button_nav_product);
+            navButtons.Add(button_nav_order);
+            navButtons.Add(button_nav_revenue);
 
             foreach (var btn in navButtons)
             {
@@ -67,6 +72,9 @@ namespace CoffeeEcommerceStore
                 case "button_nav_product":
                     loadForm(new FormProduct());
                     break;
+                case "button_nav_order":
+                    loadForm(new FormOrder());
+                    break;
                 default:
                     break;
             }
@@ -78,7 +86,7 @@ namespace CoffeeEcommerceStore
             {
                 this.panel_main.Controls.RemoveAt(0);
             }
-            Form f = form as Form;
+            System.Windows.Forms.Form f = form as System.Windows.Forms.Form;
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;
             this.panel_main.Controls.Add(f);

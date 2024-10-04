@@ -17,7 +17,7 @@ using System.Windows.Forms.VisualStyles;
 
 namespace CoffeeEcommerceStore
 {
-    public partial class FormSale : Form
+    public partial class FormSale : System.Windows.Forms.Form
     {
         ProductRequest productRequest = new ProductRequest();
         CategoryRequest categoryRequest = new CategoryRequest();

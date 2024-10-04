@@ -48,15 +48,18 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UCOrder">
+      <HintPath>..\..\CoffeeEcommerceLib\UCOrder\obj\Debug\UCOrder.dll</HintPath>
+    </Reference>
     <Reference Include="UCProduct">
       <HintPath>..\..\CoffeeEcommerceLib\UCProduct\obj\Debug\UCProduct.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form\FormSale.cs">
+    <Compile Include="_Form\FormSale.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FormSale.Designer.cs">
+    <Compile Include="_Form\FormSale.Designer.cs">
       <DependentUpon>FormSale.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLayout.cs">
@@ -65,21 +68,39 @@
     <Compile Include="FormLayout.Designer.cs">
       <DependentUpon>FormLayout.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Product\FormProduct.cs">
+    <Compile Include="_Form\Order\FormOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Product\FormProduct.Designer.cs">
+    <Compile Include="_Form\Order\FormOrder.Designer.cs">
+      <DependentUpon>FormOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Form\Order\FormOrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Form\Order\FormOrderDetail.Designer.cs">
+      <DependentUpon>FormOrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Form\Product\FormProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Form\Product\FormProduct.Designer.cs">
       <DependentUpon>FormProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form\FormSale.resx">
+    <EmbeddedResource Include="_Form\FormSale.resx">
       <DependentUpon>FormSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLayout.resx">
       <DependentUpon>FormLayout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Product\FormProduct.resx">
+    <EmbeddedResource Include="_Form\Order\FormOrder.resx">
+      <DependentUpon>FormOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Form\Order\FormOrderDetail.resx">
+      <DependentUpon>FormOrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Form\Product\FormProduct.resx">
       <DependentUpon>FormProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

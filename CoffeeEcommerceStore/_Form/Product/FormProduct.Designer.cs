@@ -1,4 +1,4 @@
-﻿namespace CoffeeEcommerceStore
+﻿namespace CoffeeEcommerceStore._Form.Product
 {
     partial class FormProduct
     {
