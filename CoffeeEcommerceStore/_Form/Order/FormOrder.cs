@@ -40,6 +40,7 @@ namespace CoffeeEcommerceStore._Form.Order
 
             // Show order detail form
             FormOrderDetail formOrderDetail = new FormOrderDetail(orderId);
+            formOrderDetail.Owner = this;
             formOrderDetail.ShowDialog();
         }
 
