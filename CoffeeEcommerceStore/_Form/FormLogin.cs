@@ -31,6 +31,9 @@ namespace CoffeeEcommerceStore._Form
             Properties.Settings.Default.store_id = storeId;
             Properties.Settings.Default.store_name = storeName;
 
+            // Save the properties
+            Properties.Settings.Default.Save();
+
             MessageBox.Show($"Đăng nhập thành công vào {storeName} (ID: {storeId})");
 
             // Close the login form

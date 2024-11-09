@@ -92,3 +92,9 @@ C:\Users\84359\Documents\Projects\Winform-Coffee\coffee-ecommerce-store\CoffeeEc
 C:\Users\84359\Documents\Projects\Winform-Coffee\coffee-ecommerce-store\CoffeeEcommerceStore\bin\Debug\UCCategory.dll
 C:\Users\84359\Documents\Projects\Winform-Coffee\coffee-ecommerce-store\CoffeeEcommerceStore\bin\Debug\UCCategory.pdb
 C:\Users\84359\Documents\Projects\Winform-Coffee\coffee-ecommerce-store\CoffeeEcommerceStore\obj\Debug\CoffeeEcommerceStore._Form.FormCategory.resources
+C:\Users\84359\Documents\Projects\Winform-Coffee\coffee-ecommerce-store\CoffeeEcommerceStore\obj\Debug\CoffeeEcommerceStore._Form.Size.FormSize.resources
+C:\Users\84359\Documents\Projects\Winform-Coffee\coffee-ecommerce-store\CoffeeEcommerceStore\obj\Debug\CoffeeEcommerceStore._Form.Topping.FormTopping.resources
+C:\Users\84359\Documents\Projects\Winform-Coffee\coffee-ecommerce-store\CoffeeEcommerceStore\bin\Debug\UCSize.dll
+C:\Users\84359\Documents\Projects\Winform-Coffee\coffee-ecommerce-store\CoffeeEcommerceStore\bin\Debug\UCTopping.dll
+C:\Users\84359\Documents\Projects\Winform-Coffee\coffee-ecommerce-store\CoffeeEcommerceStore\bin\Debug\UCSize.pdb
+C:\Users\84359\Documents\Projects\Winform-Coffee\coffee-ecommerce-store\CoffeeEcommerceStore\bin\Debug\UCTopping.pdb

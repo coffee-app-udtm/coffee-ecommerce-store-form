@@ -85,12 +85,18 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\CoffeeEcommerceLib\UCProduct\obj\Debug\UCProduct.dll</HintPath>
     </Reference>
+    <Reference Include="UCSize">
+      <HintPath>..\..\CoffeeEcommerceLib\UCSize\obj\Debug\UCSize.dll</HintPath>
+    </Reference>
+    <Reference Include="UCTopping">
+      <HintPath>..\..\CoffeeEcommerceLib\UCTopping\obj\Debug\UCTopping.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="_Form\FormCategory.cs">
+    <Compile Include="_Form\Category\FormCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="_Form\FormCategory.Designer.cs">
+    <Compile Include="_Form\Category\FormCategory.Designer.cs">
       <DependentUpon>FormCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="_Form\FormSale.cs">
@@ -131,7 +137,19 @@
     <Compile Include="_Form\Product\FormProduct.Designer.cs">
       <DependentUpon>FormProduct.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="_Form\FormCategory.resx">
+    <Compile Include="_Form\Size\FormSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Form\Size\FormSize.Designer.cs">
+      <DependentUpon>FormSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Form\Topping\FormTopping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Form\Topping\FormTopping.Designer.cs">
+      <DependentUpon>FormTopping.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="_Form\Category\FormCategory.resx">
       <DependentUpon>FormCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="_Form\FormLogin.resx">
@@ -156,6 +174,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="_Form\Product\FormProduct.resx">
       <DependentUpon>FormProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Form\Size\FormSize.resx">
+      <DependentUpon>FormSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Form\Topping\FormTopping.resx">
+      <DependentUpon>FormTopping.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
