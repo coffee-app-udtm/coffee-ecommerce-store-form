@@ -89,3 +89,6 @@ C:\Users\84359\Documents\Projects\Winform-Coffee\coffee-ecommerce-store\CoffeeEc
 C:\Users\84359\Documents\Projects\Winform-Coffee\coffee-ecommerce-store\CoffeeEcommerceStore\obj\Debug\CoffeeEcommerceStore.csproj.CopyComplete
 C:\Users\84359\Documents\Projects\Winform-Coffee\coffee-ecommerce-store\CoffeeEcommerceStore\obj\Debug\CoffeeEcommerceStore.exe
 C:\Users\84359\Documents\Projects\Winform-Coffee\coffee-ecommerce-store\CoffeeEcommerceStore\obj\Debug\CoffeeEcommerceStore.pdb
+C:\Users\84359\Documents\Projects\Winform-Coffee\coffee-ecommerce-store\CoffeeEcommerceStore\bin\Debug\UCCategory.dll
+C:\Users\84359\Documents\Projects\Winform-Coffee\coffee-ecommerce-store\CoffeeEcommerceStore\bin\Debug\UCCategory.pdb
+C:\Users\84359\Documents\Projects\Winform-Coffee\coffee-ecommerce-store\CoffeeEcommerceStore\obj\Debug\CoffeeEcommerceStore._Form.FormCategory.resources

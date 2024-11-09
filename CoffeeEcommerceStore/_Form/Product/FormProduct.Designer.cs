@@ -28,63 +28,123 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel_frame = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button_category_form = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // panel_frame
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1303, 687);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.panel_frame.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_frame.Location = new System.Drawing.Point(0, 95);
+            this.panel_frame.Name = "panel_frame";
+            this.panel_frame.Size = new System.Drawing.Size(1104, 500);
+            this.panel_frame.TabIndex = 3;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.button_category_form);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(645, 681);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(1104, 95);
+            this.panel1.TabIndex = 2;
             // 
-            // panel2
+            // button6
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(654, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(646, 681);
-            this.panel2.TabIndex = 1;
+            this.button6.Location = new System.Drawing.Point(286, 29);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(131, 44);
+            this.button6.TabIndex = 1;
+            this.button6.Text = "Quản lý topping";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(149, 29);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(131, 44);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Quản lý size";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button_category_form
+            // 
+            this.button_category_form.Location = new System.Drawing.Point(12, 29);
+            this.button_category_form.Name = "button_category_form";
+            this.button_category_form.Size = new System.Drawing.Size(131, 44);
+            this.button_category_form.TabIndex = 3;
+            this.button_category_form.Text = "Quản lý danh mục";
+            this.button_category_form.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Location = new System.Drawing.Point(983, 29);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(109, 44);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Xóa";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Location = new System.Drawing.Point(872, 29);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(105, 44);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Sửa";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(737, 29);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(129, 44);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Thêm";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // FormProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1303, 687);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(1104, 595);
+            this.Controls.Add(this.panel_frame);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormProduct";
             this.Text = "FormProduct";
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel_frame;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button_category_form;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
     }
 }
