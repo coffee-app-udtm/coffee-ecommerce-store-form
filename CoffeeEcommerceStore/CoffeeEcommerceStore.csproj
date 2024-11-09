@@ -71,6 +71,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UCLogin">
+      <HintPath>..\..\CoffeeEcommerceLib\UCLogin\obj\Debug\UCLogin.dll</HintPath>
+    </Reference>
     <Reference Include="UCOrder, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\CoffeeEcommerceLib\UCOrder\obj\Debug\UCOrder.dll</HintPath>
@@ -93,6 +96,12 @@
     <Compile Include="FormLayout.Designer.cs">
       <DependentUpon>FormLayout.cs</DependentUpon>
     </Compile>
+    <Compile Include="_Form\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Form\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="_Form\Order\FormOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +122,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="_Form\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="_Form\FormSale.resx">
       <DependentUpon>FormSale.cs</DependentUpon>
     </EmbeddedResource>
