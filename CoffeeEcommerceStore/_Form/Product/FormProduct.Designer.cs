@@ -33,14 +33,22 @@
             this.button_topping_form = new System.Windows.Forms.Button();
             this.button_size_form = new System.Windows.Forms.Button();
             this.button_category_form = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView_products = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button_search = new System.Windows.Forms.Button();
+            this.comboBox_category = new System.Windows.Forms.ComboBox();
+            this.textBox_search = new System.Windows.Forms.TextBox();
+            this.panel_frame.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_products)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_frame
             // 
+            this.panel_frame.Controls.Add(this.dataGridView_products);
+            this.panel_frame.Controls.Add(this.panel2);
             this.panel_frame.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_frame.Location = new System.Drawing.Point(0, 95);
             this.panel_frame.Name = "panel_frame";
@@ -52,9 +60,6 @@
             this.panel1.Controls.Add(this.button_topping_form);
             this.panel1.Controls.Add(this.button_size_form);
             this.panel1.Controls.Add(this.button_category_form);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -88,38 +93,71 @@
             this.button_category_form.Text = "Quản lý danh mục";
             this.button_category_form.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // dataGridView_products
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(983, 29);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(109, 44);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Xóa";
-            this.button4.UseVisualStyleBackColor = true;
+            this.dataGridView_products.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_products.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_products.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView_products.Location = new System.Drawing.Point(0, 100);
+            this.dataGridView_products.Name = "dataGridView_products";
+            this.dataGridView_products.RowHeadersWidth = 51;
+            this.dataGridView_products.RowTemplate.Height = 24;
+            this.dataGridView_products.Size = new System.Drawing.Size(1104, 400);
+            this.dataGridView_products.TabIndex = 5;
             // 
-            // button3
+            // panel2
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(872, 29);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 44);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Sửa";
-            this.button3.UseVisualStyleBackColor = true;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.button_search);
+            this.panel2.Controls.Add(this.comboBox_category);
+            this.panel2.Controls.Add(this.textBox_search);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1104, 100);
+            this.panel2.TabIndex = 4;
             // 
-            // button1
+            // label1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(737, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 44);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(12, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 20);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Danh mục";
+            // 
+            // button_search
+            // 
+            this.button_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_search.Location = new System.Drawing.Point(391, 30);
+            this.button_search.Name = "button_search";
+            this.button_search.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button_search.Size = new System.Drawing.Size(134, 45);
+            this.button_search.TabIndex = 6;
+            this.button_search.Text = "Tìm kiếm";
+            this.button_search.UseVisualStyleBackColor = true;
+            // 
+            // comboBox_category
+            // 
+            this.comboBox_category.FormattingEnabled = true;
+            this.comboBox_category.ItemHeight = 16;
+            this.comboBox_category.Location = new System.Drawing.Point(16, 51);
+            this.comboBox_category.Name = "comboBox_category";
+            this.comboBox_category.Size = new System.Drawing.Size(165, 24);
+            this.comboBox_category.TabIndex = 5;
+            // 
+            // textBox_search
+            // 
+            this.textBox_search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBox_search.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox_search.Location = new System.Drawing.Point(187, 30);
+            this.textBox_search.Multiline = true;
+            this.textBox_search.Name = "textBox_search";
+            this.textBox_search.Size = new System.Drawing.Size(198, 45);
+            this.textBox_search.TabIndex = 4;
             // 
             // FormProduct
             // 
@@ -131,7 +169,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormProduct";
             this.Text = "FormProduct";
+            this.panel_frame.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_products)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -143,8 +185,11 @@
         private System.Windows.Forms.Button button_topping_form;
         private System.Windows.Forms.Button button_size_form;
         private System.Windows.Forms.Button button_category_form;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView_products;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button_search;
+        private System.Windows.Forms.ComboBox comboBox_category;
+        private System.Windows.Forms.TextBox textBox_search;
     }
 }
