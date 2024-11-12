@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 using CoffeeEcommerceStore._Form.Product;
 using CoffeeEcommerceStore._Form.Order;
+using CoffeeEcommerceStore._Form.Revenue;
 
 namespace CoffeeEcommerceStore
 {
@@ -74,6 +75,9 @@ namespace CoffeeEcommerceStore
                     break;
                 case "button_nav_order":
                     loadForm(new FormOrder());
+                    break;
+                case "button_nav_revenue":
+                    loadForm(new FormRevenue());
                     break;
                 default:
                     break;

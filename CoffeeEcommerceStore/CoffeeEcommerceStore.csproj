@@ -85,6 +85,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\CoffeeEcommerceLib\UCProduct\obj\Debug\UCProduct.dll</HintPath>
     </Reference>
+    <Reference Include="UCRevenue">
+      <HintPath>..\..\CoffeeEcommerceLib\UCRevenue\obj\Debug\UCRevenue.dll</HintPath>
+    </Reference>
     <Reference Include="UCSize">
       <HintPath>..\..\CoffeeEcommerceLib\UCSize\obj\Debug\UCSize.dll</HintPath>
     </Reference>
@@ -137,6 +140,12 @@
     <Compile Include="_Form\Product\FormProduct.Designer.cs">
       <DependentUpon>FormProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="_Form\Revenue\FormRevenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Form\Revenue\FormRevenue.Designer.cs">
+      <DependentUpon>FormRevenue.cs</DependentUpon>
+    </Compile>
     <Compile Include="_Form\Size\FormSize.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="_Form\Product\FormProduct.resx">
       <DependentUpon>FormProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Form\Revenue\FormRevenue.resx">
+      <DependentUpon>FormRevenue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="_Form\Size\FormSize.resx">
       <DependentUpon>FormSize.cs</DependentUpon>
