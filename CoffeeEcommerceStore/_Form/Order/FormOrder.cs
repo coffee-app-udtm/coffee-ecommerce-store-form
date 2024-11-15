@@ -66,7 +66,8 @@ namespace CoffeeEcommerceStore._Form.Order
                 // **** Check if admin -> show all orders
 
                 // **** Check if store owner -> show orders at store
-                int storeId = 1;
+                //int storeId = 1;
+                int storeId = Properties.Settings.Default.store_id;
 
                 orders = orders.Where(o => o.store_id == storeId).OrderByDescending(o => o.order_date).ToList();
 

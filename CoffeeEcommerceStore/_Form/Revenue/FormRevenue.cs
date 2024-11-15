@@ -18,8 +18,9 @@ namespace CoffeeEcommerceStore._Form.Revenue
 
             // Get store id from settings
             int storeId = Properties.Settings.Default.store_id;
+            string accountType = Properties.Settings.Default.account_type;
 
-            this.ucRevenueList1.RenderStoreRevenue(storeId);
+            this.ucRevenueList1.RenderStoreRevenue(storeId, accountType);
         }
     }
 }

@@ -133,13 +133,16 @@
   <data name="icons8-coffee-cup-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-coffee-cup-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="coffee-placeholder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coffee-placeholder.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-home-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-home-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="coffee-image-sample" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coffee-image-sample.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="coffee-placeholder" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coffee-placeholder.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-test-account-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-test-account-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

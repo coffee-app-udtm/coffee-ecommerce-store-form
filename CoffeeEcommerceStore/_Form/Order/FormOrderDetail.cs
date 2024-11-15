@@ -21,7 +21,7 @@ namespace CoffeeEcommerceStore._Form.Order
     {
         public IFirebaseConfig firebaseconfig = new FirebaseConfig
         {
-            AuthSecret = "7pxmzjhkrfpg5tm6mpt5qbqtbwt5d6ytnlo8jjgv",
+            AuthSecret = "7PXMZJHkrfpg5tm6MPT5QbqTbwT5D6YtnLo8jjgV",
             BasePath = "https://ecommerce-app-83f6e-default-rtdb.asia-southeast1.firebasedatabase.app/"
         };
 

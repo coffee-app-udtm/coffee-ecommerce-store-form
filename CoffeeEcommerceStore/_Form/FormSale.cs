@@ -131,7 +131,8 @@ namespace CoffeeEcommerceStore
             DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn tạo đơn hàng?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             // ***** fake store id
-            int storeId = 1; // get from properties setting
+            //int storeId = 1; // get from properties setting
+            int storeId = Properties.Settings.Default.store_id;
 
             if (dialogResult == DialogResult.Yes)
             {

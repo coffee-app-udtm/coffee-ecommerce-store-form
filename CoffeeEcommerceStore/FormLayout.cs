@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using CoffeeEcommerceStore._Form.Product;
 using CoffeeEcommerceStore._Form.Order;
 using CoffeeEcommerceStore._Form.Revenue;
+using CoffeeEcommerceStore._Form;
 
 namespace CoffeeEcommerceStore
 {
@@ -22,9 +23,64 @@ namespace CoffeeEcommerceStore
         {
             InitializeComponent();
 
+            // Thiết lập form toàn màn hình
+            this.WindowState = FormWindowState.Maximized;  // Phóng to form
+            this.TopMost = true;                           // Đặt form luôn trên các cửa sổ khác
+
+            // 
+            string currentUserName = Properties.Settings.Default.store_name;
+
+            // Xử lý thêm ... nếu tên quá dài
+            if (currentUserName.Length > 10)
+            {
+                currentUserName = currentUserName.Substring(0, 10) + "...";
+            }
+
+            this.button_current_user.Text = " " + currentUserName;
+
             initNavButtons();
             setActiveButton(button_nav_dashboard);
             loadForm(new FormSale());
+
+            this.button_logout.Click += button_logout_Click;
+            this.FormClosing += FormLayout_FormClosing;
+        }
+
+        private void FormLayout_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát ứng dụng không?",
+                                          "Xác nhận thoát",
+                                          MessageBoxButtons.YesNo,
+                                          MessageBoxIcon.Question);
+
+            // Nếu người dùng chọn "No", hủy việc đóng form
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+
+        }
+
+        private void button_logout_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn có muốn đăng xuất không?", "Logout", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+
+                // Clear settings
+                Properties.Settings.Default.store_id = 0;
+                Properties.Settings.Default.store_name = "";
+                Properties.Settings.Default.account_type = "";
+
+                Properties.Settings.Default.Save();
+
+
+                this.Hide();
+
+                FormLogin formLogin = new FormLogin();
+                formLogin.Show();
+            }
         }
 
         private void initNavButtons()
@@ -68,15 +124,19 @@ namespace CoffeeEcommerceStore
             switch (clickedButton.Name)
             {
                 case "button_nav_dashboard":
+                    this.Text = "Dashboard";
                     loadForm(new FormSale());
                     break;
                 case "button_nav_product":
+                    this.Text = "Sản phẩm";
                     loadForm(new FormProduct());
                     break;
                 case "button_nav_order":
+                    this.Text = "Đơn hàng";
                     loadForm(new FormOrder());
                     break;
                 case "button_nav_revenue":
+                    this.Text = "Doanh thu";
                     loadForm(new FormRevenue());
                     break;
                 default:

@@ -26,10 +26,12 @@ namespace CoffeeEcommerceStore._Form
             // Handle the login data here
             int storeId = e.id;
             string storeName = e.store_name;
+            string accountType = e.account_type;
 
             // Set to properties
             Properties.Settings.Default.store_id = storeId;
             Properties.Settings.Default.store_name = storeName;
+            Properties.Settings.Default.account_type = accountType;
 
             // Save the properties
             Properties.Settings.Default.Save();

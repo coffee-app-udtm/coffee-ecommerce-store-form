@@ -139,5 +139,15 @@ namespace CoffeeEcommerceStore.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_test_account_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-test-account-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

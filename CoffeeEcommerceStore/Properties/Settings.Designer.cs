@@ -46,5 +46,17 @@ namespace CoffeeEcommerceStore.Properties {
                 this["store_name"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string account_type {
+            get {
+                return ((string)(this["account_type"]));
+            }
+            set {
+                this["account_type"] = value;
+            }
+        }
     }
 }
